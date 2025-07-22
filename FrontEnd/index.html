@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Banking System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body class="light">
+  <button class="toggle-theme" onclick="toggleTheme()">🌗 Toggle Theme</button>
+  <h1>Mini Banking System</h1>
+
+  <div class="grid-container">
+    <div class="section">
+      <h2>Register</h2>
+      <input id="owner" placeholder="Owner name" />
+      <button onclick="register()">Register</button>
+      <p id="registerResult"></p>
+    </div>
+
+    <div class="section">
+      <h2>Deposit</h2>
+      <input id="depId" placeholder="Account ID" />
+      <input id="depAmt" placeholder="Amount" />
+      <button onclick="deposit()">Deposit</button>
+      <p id="depositResult"></p>
+    </div>
+
+    <div class="section">
+      <h2>Withdraw</h2>
+      <input id="withId" placeholder="Account ID" />
+      <input id="withAmt" placeholder="Amount" />
+      <button onclick="withdraw()">Withdraw</button>
+      <p id="withdrawResult"></p>
+    </div>
+
+    <div class="section">
+      <h2>Check Balance</h2>
+      <input id="balId" placeholder="Account ID" />
+      <button onclick="checkBalance()">Check</button>
+      <p id="balanceResult"></p>
+    </div>
+
+    <div class="section" style="grid-column: span 2">
+      <h2>Transaction History</h2>
+      <input id="histId" placeholder="Account ID" />
+      <button onclick="getHistory()">Get History</button>
+      <ul id="historyResult"></ul>
+    </div>
+  </div>
+
+  <div class="watermark">Made by Akhil | 229x1a2860</div>
+  <script src="script.js"></script>
+</body>
+</html>
