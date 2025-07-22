@@ -1,1 +1,151 @@
+:root {
+  --bg-light: #f4f4f4;
+  --card-light: #ffffff;
+  --text-light: #111;
+  --muted-light: #555;
+  --primary-light: #0d6efd;
 
+  --bg-dark: #121212;
+  --card-dark: #1e1e1e;
+  --text-dark: #ffffff;
+  --muted-dark: #cccccc;
+  --primary-dark: #0d6efd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light {
+  --bg: var(--bg-light);
+  --card: var(--card-light);
+  --text: var(--text-light);
+  --muted: var(--muted-light);
+  --primary: var(--primary-light);
+}
+
+.dark {
+  --bg: var(--bg-dark);
+  --card: var(--card-dark);
+  --text: var(--text-dark);
+  --muted: var(--muted-dark);
+  --primary: var(--primary-dark);
+}
+
+h1 {
+  color: var(--primary);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.section {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--muted);
+  padding-bottom: 0.5rem;
+  color: var(--text);
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: 1px solid #444;
+  background-color: transparent;
+  color: var(--text);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+p {
+  margin-top: 0.8rem;
+  font-weight: bold;
+  color: var(--muted);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+li {
+  background: var(--card);
+  margin-bottom: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-left: 4px solid var(--primary);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.watermark {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 10px;
+  color: rgba(100, 100, 100, 0.3);
+  pointer-events: none;
+  user-select: none;
+}
